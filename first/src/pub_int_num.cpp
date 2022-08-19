@@ -28,8 +28,9 @@ int main(int argc, char **argv)
     
 for(num;num<=100;num++)
 {
-    ROS_INFO("%i", msg.data);
     msg.data = num;
+    ROS_INFO("%i", msg.data);
+    
 }   
    
 
