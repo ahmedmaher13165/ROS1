@@ -18,10 +18,7 @@ int main(int argc, char **argv)
   ros::Rate loop_rate(10);
 
  
-  // int count = 0;
-  // while (ros::ok())
- // { 
-    
+
     std_msgs::Int32 msg;
     chatter_pub.publish(msg);
    int num=20;
@@ -37,9 +34,7 @@ for(num;num<=100;num++)
     ros::spinOnce();
 
     loop_rate.sleep();
-    //++count;
- // }
-
+ 
 
   return 0;
 }
