@@ -206,5 +206,5 @@ include_directories(
 add_executable(pub_int_num src/pub_int_num.cpp)
 target_link_libraries(pub_int_num ${catkin_LIBRARIES})
 
-# add_executable(divide src/divide.cpp)
-# target_link_libraries(divide ${catkin_LIBRARIES})
+add_executable(divide src/divide.cpp)
+target_link_libraries(divide ${catkin_LIBRARIES})
