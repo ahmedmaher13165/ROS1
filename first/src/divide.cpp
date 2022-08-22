@@ -25,7 +25,7 @@ int main(int argc, char **argv)
   ros::Subscriber sub = nh.subscribe("pub_int_num", 1000,chatterCallback);
   ros::Publisher divide_pub = n.advertise<std_msgs::Float32>("result", 50);
 
-  ros::Rate loop_rate(5);
+  ros::Rate loop_rate(10);
   while (ros::ok())
   {
 
