@@ -7,7 +7,7 @@ void chatterCallback(const std_msgs::Int32& msg)
 {
   
   
-  number=(float)(msg.data);
+  number=msg.data;
   
 }
 
@@ -36,7 +36,7 @@ int main(int argc, char **argv)
   ROS_INFO("result: [%.2f]", result.data);
   divide_pub.publish(result);
 
-   ros::spin();
+   ros::spinOnce();
    loop_rate.sleep();
   }
 

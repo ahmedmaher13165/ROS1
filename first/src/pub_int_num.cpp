@@ -11,8 +11,8 @@ int main(int argc, char **argv)
   ros::NodeHandle n;
   ros::Publisher chatter_pub = n.advertise<std_msgs::Int32>("pub_int_num", 50);
   ros::Rate loop_rate(5);
-int count = 0;
-  while (ros::ok())
+
+  while (ros::ok() && num<=99)
   {
   
     std_msgs::Int32 msg;
@@ -23,15 +23,16 @@ for(num;num<=100;num++)
 {   
     msg.data = num;
     ROS_INFO("%i", msg.data);
-    chatter_pub.publish(msg);  
+    chatter_pub.publish(msg); 
+    sleep(1) ;
 }   
  
 
     ros::spinOnce();
 
     loop_rate.sleep();
-++count;
- }
 
+ }
+num=100;
   return 0;
 }
